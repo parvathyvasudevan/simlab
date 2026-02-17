@@ -1,16 +1,16 @@
 import React from 'react';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import Hero from './components/sections/Hero';
-import ValueProps from './components/sections/ValueProps';
-import HowItWorks from './components/sections/HowItWorks';
-import Difference from './components/sections/Difference';
-import InstitutionControl from './components/sections/InstitutionControl';
-import Audience from './components/sections/Audience';
-import PlatformFeatures from './components/sections/PlatformFeatures';
-import Partners from './components/sections/Partners';
-import Pricing from './components/sections/Pricing';
-import CTA from './components/sections/CTA';
+import Navbar from './Components/layout/Navbar';
+import Footer from './Components/layout/Footer';
+import Hero from './Components/sections/Hero';
+import ValueProps from './Components/sections/ValueProps';
+import HowItWorks from './Components/sections/HowItWorks';
+import Difference from './Components/sections/Difference';
+import InstitutionControl from './Components/sections/InstitutionControl';
+import Audience from './Components/sections/Audience';
+import PlatformFeatures from './Components/sections/PlatformFeatures';
+import Partners from './Components/sections/Partners';
+import Pricing from './Components/sections/Pricing';
+import CTA from './Components/sections/CTA';
 
 function App() {
   return (
