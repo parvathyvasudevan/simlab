@@ -20,7 +20,7 @@ const Partners = () => {
               <div className="text-4xl font-display font-bold tracking-[0.4em] text-white mb-3 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">DRÄGER</div>
               <div className="text-xs font-bold uppercase tracking-[0.5em] text-[var(--color-neon-purple)] mb-8 opacity-80">Medical Academy</div>
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-[var(--color-neon-purple)] to-transparent mb-8"></div>
-              <div className="text-xl text-white font-display font-bold mb-4 tracking-wide">Advanced Medical Equipment Training</div>
+              <div className="text-xl text-[var(--color-medical-highlight)] font-display font-bold mb-4 tracking-wide">Advanced Medical Equipment Training</div>
               <p className="text-slate-400 max-w-xl mx-auto text-base leading-relaxed text-justify group-hover:text-slate-300 transition-colors">
                 SIMLAB licenses and integrates premium simulation content from Dräger Medical Academy under strict platform governance and quality standards.
               </p>

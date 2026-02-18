@@ -32,7 +32,7 @@ const Footer = () => {
 
           {/* Platform Column */}
           <div>
-            <h3 className="text-[var(--color-medical-text)] font-display font-bold text-lg mb-6 flex items-center gap-2">
+            <h3 className="text-[var(--color-medical-highlight)] font-display font-bold text-lg mb-6 flex items-center gap-2">
                 Platform
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-medical-accent)]"></span>
             </h3>
@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Company Column */}
           <div>
-            <h3 className="text-[var(--color-medical-text)] font-display font-bold text-lg mb-6 flex items-center gap-2">
+            <h3 className="text-[var(--color-medical-highlight)] font-display font-bold text-lg mb-6 flex items-center gap-2">
                 Company
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-medical-highlight)]"></span>
             </h3>
@@ -67,7 +67,7 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <div>
-            <h3 className="text-[var(--color-medical-text)] font-display font-bold text-lg mb-6">Stay Updated</h3>
+            <h3 className="text-[var(--color-medical-highlight)] font-display font-bold text-lg mb-6">Stay Updated</h3>
             <p className="text-sm text-[var(--color-medical-text-dim)] mb-6">
               Subscribe to our newsletter for the latest simulation scenarios and medical updates.
             </p>

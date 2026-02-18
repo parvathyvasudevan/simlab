@@ -52,20 +52,20 @@ const Navbar = () => {
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-neon-purple)] to-[var(--color-deep-indigo)] flex items-center justify-center text-white shadow-lg group-hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
             </div>
-            <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:text-[var(--color-neon-purple)] transition-all">
+            <span className={`font-display font-bold text-2xl tracking-tight transition-all ${isScrolled ? 'text-white' : 'text-[var(--color-medical-text)]'} group-hover:text-[var(--color-neon-purple)]`}>
               SIM<span className="text-[var(--color-neon-purple)]">LAB</span>
             </span>
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center lg:gap-8 md:gap-4 ml-auto">
-            <div className={`flex items-center gap-1 ${isScrolled ? 'bg-white/5' : 'bg-white/10 text-white'} rounded-full px-2 py-1 border border-white/10 backdrop-blur-sm`}>
+            <div className={`flex items-center gap-1 ${isScrolled ? 'bg-white/5 border-white/10' : 'bg-black/5 border-black/10'} rounded-full px-2 py-1 border backdrop-blur-sm transition-colors`}>
               {navLinks.map((item) => (
                 <motion.a 
                   key={item.name}
                   href={item.href} 
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className={`relative lg:px-5 md:px-3 py-2 text-sm font-bold ${isScrolled ? 'text-slate-300' : 'text-white/80'} hover:text-[var(--color-neon-purple)] transition-all rounded-full hover:bg-[var(--color-neon-purple)]/5 flex items-center gap-1 group`}
+                  className={`relative lg:px-5 md:px-3 py-2 text-sm font-bold ${isScrolled ? 'text-slate-300' : 'text-[var(--color-medical-text)]'} hover:text-[var(--color-neon-purple)] transition-all rounded-full hover:bg-[var(--color-neon-purple)]/5 flex items-center gap-1 group`}
                 >
                   {item.name}
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -91,9 +91,9 @@ const Navbar = () => {
           <div className="md:hidden flex items-center ml-auto">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-[var(--color-neon-purple)] focus:outline-none p-2 bg-white/10 rounded-lg border border-white/10"
+              className={`${isScrolled ? 'text-white' : 'text-[var(--color-medical-text)]'} hover:text-[var(--color-neon-purple)] focus:outline-none p-2 ${isScrolled ? 'bg-white/10 border-white/10' : 'bg-black/5 border-black/10'} rounded-lg border transition-all`}
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isScrolled && isMobileMenuOpen ? <X className="h-6 w-6" /> : isScrolled ? <Menu className="h-6 w-6" /> : isMobileMenuOpen ? <X className="h-6 w-6 text-[var(--color-medical-text)]" /> : <Menu className="h-6 w-6 text-[var(--color-medical-text)]" />}
             </button>
           </div>
         </div>

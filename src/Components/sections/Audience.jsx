@@ -44,7 +44,7 @@ const Audience = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal width="100%">
           <div className="text-center mb-16 relative z-10">
-            <h2 className="font-display text-3xl font-bold text-[var(--color-medical-text)]">Who is SIMLAB For?</h2>
+            <h2 className="font-display text-3xl font-bold text-[var(--color-medical-highlight)]">Who is SIMLAB For?</h2>
           </div>
         </ScrollReveal>
         
@@ -59,7 +59,7 @@ const Audience = () => {
               className={`glass-panel p-6 rounded-2xl bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all border-t-4 border-t-[var(--color-medical-accent)]/80 hover:shadow-[0_15px_40px_rgba(99,102,241,0.06)] relative z-20 group`}
             >
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
-              <h3 className="font-bold text-lg mb-2 text-[var(--color-medical-text)] group-hover:text-[var(--color-medical-accent)] transition-colors">{item.title}</h3>
+              <h3 className="font-bold text-lg mb-2 text-[var(--color-medical-highlight)] group-hover:text-[var(--color-medical-accent)] transition-colors">{item.title}</h3>
               <p className="text-[var(--color-medical-text-dim)] text-sm text-justify">{item.description}</p>
             </motion.div>
           ))}

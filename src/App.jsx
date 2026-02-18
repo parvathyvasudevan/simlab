@@ -1,22 +1,22 @@
 import React from 'react';
-import Navbar from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
-import Partners from './components/sections/Partners';
-import About from './components/sections/About';
-import PlatformFeatures from './components/sections/PlatformFeatures';
-import ValueProps from './components/sections/ValueProps';
-import VRLearning from './components/sections/VRLearning';
-import HowItWorks from './components/sections/HowItWorks';
-import Training from './components/sections/Training';
-import Programs from './components/sections/Programs';
-import Audience from './components/sections/Audience';
-import InstitutionControl from './components/sections/InstitutionControl';
-import Difference from './components/sections/Difference';
+import Navbar from './Components/layout/Navbar';
+import Hero from './Components/sections/Hero';
+import Partners from './Components/sections/Partners';
+import About from './Components/sections/About';
+import PlatformFeatures from './Components/sections/PlatformFeatures';
+import ValueProps from './Components/sections/ValueProps';
+import VRLearning from './Components/sections/VRLearning';
+import HowItWorks from './Components/sections/HowItWorks';
+import Training from './Components/sections/Training';
+import Programs from './Components/sections/Programs';
+import Audience from './Components/sections/Audience';
+import InstitutionControl from './Components/sections/InstitutionControl';
+import Difference from './Components/sections/Difference';
 
-import Pricing from './components/sections/Pricing';
-import CTA from './components/sections/CTA';
-import Contact from './components/sections/Contact';
-import Footer from './components/layout/Footer';
+import Pricing from './Components/sections/Pricing';
+import CTA from './Components/sections/CTA';
+import Contact from './Components/sections/Contact';
+import Footer from './Components/layout/Footer';
 
 function App() {
   return (

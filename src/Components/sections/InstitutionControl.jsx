@@ -31,7 +31,7 @@ const InstitutionControl = () => {
             <h3 className="text-[var(--color-medical-accent)] font-semibold uppercase tracking-wider text-sm mb-3">
               Global Standards
             </h3>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-medical-text)] mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-medical-highlight)] mb-6">
               Designed for Medical Institutions Worldwide
             </h2>
             <p className="text-[var(--color-medical-text-dim)] text-lg text-justify">
@@ -53,7 +53,7 @@ const InstitutionControl = () => {
               <div className="w-14 h-14 bg-[var(--color-medical-accent)]/10 rounded-xl flex items-center justify-center text-[var(--color-medical-accent)] mb-6 group-hover:bg-[var(--color-medical-accent)] group-hover:text-white transition-colors duration-300 shadow-sm">
                 {item.icon}
               </div>
-              <h4 className="font-bold text-xl text-[var(--color-medical-text)] mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">
+              <h4 className="font-bold text-xl text-[var(--color-medical-highlight)] mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">
                 {item.title}
               </h4>
               <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed mb-6 text-justify">
@@ -73,7 +73,7 @@ const InstitutionControl = () => {
             <p className="text-[var(--color-medical-text-dim)] text-sm uppercase tracking-wider font-semibold mb-2 relative z-10">
               Official Content Partner
             </p>
-            <div className="text-2xl md:text-3xl font-bold text-[var(--color-medical-text)] relative z-10">
+            <div className="text-2xl md:text-3xl font-bold text-[var(--color-medical-highlight)] relative z-10">
               Training content powered by <span className="text-[var(--color-medical-accent)]">Dräger Medical Academy</span>
             </div>
           </div>

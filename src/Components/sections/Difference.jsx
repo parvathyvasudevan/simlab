@@ -40,10 +40,10 @@ const Difference = () => {
           <div className="md:w-1/2">
             <ScrollReveal width="100%" direction="left">
                <h2 className="text-[var(--color-neon-purple)] font-bold tracking-widest uppercase text-sm mb-4 drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">The Difference</h2>
-               <h3 className="font-display text-4xl md:text-5xl font-bold mb-6 text-white text-gradient">What Makes SIMLAB Different?</h3>
+               <h3 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-medical-highlight)]">What Makes SIMLAB Different?</h3>
             </ScrollReveal>
             <ScrollReveal width="100%" delay={0.1} direction="left">
-              <p className="text-lg text-slate-400 mb-10 leading-relaxed text-justify">
+              <p className="text-lg text-slate-300 mb-10 leading-relaxed text-justify">
                 True-to-life medical simulations that bridge the gap between theory and practice. We focus on the consequences of decisions.
               </p>
             </ScrollReveal>
@@ -62,8 +62,8 @@ const Difference = () => {
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-lg text-white mb-2 group-hover:text-[var(--color-neon-purple)] transition-colors">{item.title}</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed text-justify group-hover:text-slate-200 transition-colors">{item.description}</p>
+                    <h4 className="font-display font-bold text-lg text-[var(--color-medical-highlight)] mb-2 group-hover:text-[var(--color-neon-purple)] transition-colors">{item.title}</h4>
+                    <p className="text-slate-300 text-sm leading-relaxed text-justify group-hover:text-slate-200 transition-colors">{item.description}</p>
                   </div>
                 </motion.li>
               ))}

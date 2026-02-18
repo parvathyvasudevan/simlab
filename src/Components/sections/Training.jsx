@@ -73,7 +73,7 @@ const Training = () => {
         <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-20">
                  <h2 className="text-[var(--color-medical-accent)] font-bold tracking-wide uppercase text-sm mb-3">Comprehensive Education</h2>
-                 <h3 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-medical-text)] mb-6">Available Learning Formats</h3>
+                 <h3 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-medical-highlight)] mb-6">Available Learning Formats</h3>
                  <p className="text-[var(--color-medical-text-dim)] text-lg leading-relaxed text-justify">
                     From remote digital courses to immersive virtual reality and high-fidelity onsite simulations. Choose the learning experience that fits your needs.
                  </p>
@@ -100,7 +100,7 @@ const Training = () => {
 
                                     <div className="relative z-10">
                                         <div className="text-5xl mb-6 filter drop-shadow-md">{module.icon}</div>
-                                        <h3 className="text-3xl font-display font-bold text-[var(--color-medical-text)] mb-4">{module.category}</h3>
+                                         <h3 className="text-3xl font-display font-bold text-[var(--color-medical-highlight)] mb-4">{module.category}</h3>
                                         <p className="text-lg text-[var(--color-medical-text-dim)] mb-8 leading-relaxed text-justify">
                                             {module.description}
                                         </p>

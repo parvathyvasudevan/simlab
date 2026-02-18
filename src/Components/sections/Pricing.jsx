@@ -11,7 +11,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 max-w-3xl mx-auto">
             <h2 className="text-[var(--color-medical-accent)] font-bold tracking-wide uppercase text-sm mb-3">Flexible Plans</h2>
-            <h3 className="font-display text-4xl font-bold text-[var(--color-medical-text)] mb-6">Choose Your Pathway</h3>
+            <h3 className="font-display text-4xl font-bold text-[var(--color-medical-highlight)] mb-6">Choose Your Pathway</h3>
             <p className="text-[var(--color-medical-text-dim)] text-lg text-justify">Scalable solutions for individual professionals and large healthcare institutions.</p>
         </div>
 
@@ -25,7 +25,7 @@ const Pricing = () => {
                   <div className="w-14 h-14 bg-[var(--color-medical-accent)]/10 rounded-2xl flex items-center justify-center mb-6 text-[var(--color-medical-accent)] border border-[var(--color-medical-accent)]/10 group-hover:scale-110 transition-transform duration-300">
                     <ShieldCheck size={28} />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-[var(--color-medical-text)] mb-2">Institutional Access</h3>
+                  <h3 className="text-2xl font-display font-bold text-[var(--color-medical-highlight)] mb-2">Institutional Access</h3>
                   <p className="text-[var(--color-medical-text-dim)] mb-8 text-sm h-10 text-justify">For Hospitals, Universities & Training Centers requiring full administrative control.</p>
                   
                   <div className="space-y-4 mb-10">
@@ -66,7 +66,7 @@ const Pricing = () => {
                       <span className="px-3 py-1 bg-[var(--color-medical-accent)]/20 text-[var(--color-medical-accent)] text-xs font-bold uppercase rounded-full border border-[var(--color-medical-accent)]/30">Most Popular</span>
                   </div>
 
-                  <h3 className="text-2xl font-display font-bold text-[var(--color-medical-text)] mb-2">Pro Individual</h3>
+                  <h3 className="text-2xl font-display font-bold text-[var(--color-medical-highlight)] mb-2">Pro Individual</h3>
                   <p className="text-[var(--color-medical-text-dim)] mb-8 text-sm h-10 text-justify">For Doctors, Nurses & Specialists seeking advanced certification.</p>
                   
                   <div className="space-y-4 mb-10">

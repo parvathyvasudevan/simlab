@@ -16,7 +16,7 @@ const CTA = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4">
         <ScrollReveal width="100%">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight text-[var(--color-medical-text)]">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight text-[var(--color-medical-highlight)]">
             Build the Future of Medical Training <br/> with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)]">SIMLAB</span>
           </h2>
           <p className="text-[var(--color-medical-text-dim)] text-lg mb-10 max-w-2xl mx-auto text-justify">
@@ -25,7 +25,7 @@ const CTA = () => {
         </ScrollReveal>
 
         <div className="border-y border-[var(--color-medical-accent)]/10 py-10 my-10 relative">
-          <h3 className="text-2xl font-bold mb-8 font-display text-[var(--color-medical-text)]">Why Choose SIMLAB?</h3>
+          <h3 className="text-2xl font-bold mb-8 font-display text-[var(--color-medical-highlight)]">Why Choose SIMLAB?</h3>
           <div className="grid md:grid-cols-3 gap-y-4 gap-x-8 text-left max-w-4xl mx-auto">
             {[
               "Simulation-first methodology",

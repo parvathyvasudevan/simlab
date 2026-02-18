@@ -34,8 +34,8 @@ const VRLearning = () => {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <ScrollReveal scale={1.1}>
              <h2 className="text-[var(--color-neon-purple)] font-bold tracking-widest uppercase text-sm mb-4 drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Immersive VR Immersion</h2>
-             <h3 className="font-display text-4xl md:text-5xl font-bold mb-8 text-white">Next-Gen SimLabsXR</h3>
-             <p className="text-slate-400 text-lg leading-relaxed text-justify">
+             <h3 className="font-display text-4xl md:text-5xl font-bold mb-8 text-[var(--color-neon-purple)]">Next-Gen SimLabsXR</h3>
+             <p className="text-slate-300 text-lg leading-relaxed text-justify">
                 Step into the future of surgery. Our virtual reality modules provide high-fidelity, risk-free immersion that pushes the boundaries of clinical training.
              </p>
           </ScrollReveal>
@@ -62,7 +62,7 @@ const VRLearning = () => {
                     </div>
                     <div className="p-8 relative">
                         <h4 className="font-display font-bold text-2xl mb-3 text-white group-hover:text-[var(--color-neon-purple)] transition-colors duration-300">{feature.title}</h4>
-                        <p className="text-slate-400 text-sm mb-6 leading-relaxed text-justify group-hover:text-slate-200 transition-colors">{feature.desc}</p>
+                        <p className="text-slate-300 text-sm mb-6 leading-relaxed text-justify group-hover:text-slate-200 transition-colors">{feature.desc}</p>
                         <a href="#" className="inline-flex items-center text-sm font-bold text-[var(--color-neon-purple)] group-hover:gap-4 transition-all duration-300">
                            <span className="relative">
                              START IMMERSION

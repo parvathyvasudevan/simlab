@@ -40,7 +40,7 @@ const HowItWorks = () => {
         <ScrollReveal width="100%">
           <div className="text-center mb-20">
             <h2 className="text-[var(--color-medical-accent)] font-bold tracking-wide uppercase text-sm mb-3">Process</h2>
-            <h3 className="font-display text-4xl font-bold text-[var(--color-medical-text)]">How SIMLAB Works</h3>
+            <h3 className="font-display text-4xl font-bold text-[var(--color-medical-highlight)]">How SIMLAB Works</h3>
           </div>
         </ScrollReveal>
         
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                 </div>
                 <div className="text-4xl font-bold text-[var(--color-medical-accent)]/5 absolute top-0 right-4">{step.id}</div>
                 
-                <h4 className="text-xl font-display font-bold mb-3 text-[var(--color-medical-text)] group-hover:text-[var(--color-medical-accent)] transition-colors">{step.title}</h4>
+                <h4 className="text-xl font-display font-bold mb-3 text-[var(--color-medical-highlight)] group-hover:text-[var(--color-medical-accent)] transition-colors">{step.title}</h4>
                 <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed text-justify">{step.description}</p>
               </div>
             </motion.div>

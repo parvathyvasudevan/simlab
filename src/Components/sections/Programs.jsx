@@ -71,7 +71,7 @@ const Programs = () => {
                  <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-medical-accent)]/10 border border-[var(--color-medical-accent)]/20 mb-6 backdrop-blur-md">
                     <span className="text-[var(--color-medical-accent)] font-bold tracking-wide uppercase text-xs">Certification & Skills</span>
                  </div>
-                 <h3 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-medical-text)] mb-6">Comprehensive Programs</h3>
+                 <h3 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-medical-highlight)] mb-6">Comprehensive Programs</h3>
                  <p className="text-[var(--color-medical-text-dim)] text-lg leading-relaxed text-justify">
                     Designed for specialists. Our curriculum covers the entire spectrum of critical care technology and clinical application.
                  </p>
@@ -102,7 +102,7 @@ const Programs = () => {
                             </div>
 
                             {/* Content */}
-                            <h4 className="font-display font-bold text-xl text-[var(--color-medical-text)] mb-4 group-hover:text-[var(--color-medical-accent)] transition-colors duration-300">
+                            <h4 className="font-display font-bold text-xl text-[var(--color-medical-highlight)] mb-4 group-hover:text-[var(--color-medical-accent)] transition-colors duration-300">
                                 {prog.name}
                             </h4>
                             

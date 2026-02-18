@@ -18,7 +18,7 @@ const About = () => {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-medical-accent)]/10 border border-[var(--color-medical-accent)]/20 mb-6">
                     <span className="text-[var(--color-medical-accent)] text-xs font-bold uppercase tracking-widest">Our Methodology</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-medical-text)] mb-6 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-medical-highlight)] mb-6 leading-tight">
                     Bridging Theory & <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)]">Clinical Reality</span>
                 </h2>
@@ -29,12 +29,12 @@ const About = () => {
                 <div className="grid sm:grid-cols-2 gap-6">
                     <div className="p-6 rounded-2xl bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all shadow-sm">
                         <Shield className="w-10 h-10 text-[var(--color-medical-accent)] mb-4" />
-                        <h4 className="text-[var(--color-medical-text)] font-bold text-lg mb-2">Zero-Risk Learning</h4>
+                        <h4 className="text-[var(--color-medical-highlight)] font-bold text-lg mb-2">Zero-Risk Learning</h4>
                         <p className="text-[var(--color-medical-text-dim)] text-sm">Mistakes here are lessons, not liabilities.</p>
                     </div>
                     <div className="p-6 rounded-2xl bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all shadow-sm">
                         <Activity className="w-10 h-10 text-[var(--color-medical-highlight)] mb-4" />
-                        <h4 className="text-[var(--color-medical-text)] font-bold text-lg mb-2">High Fidelity</h4>
+                        <h4 className="text-[var(--color-medical-highlight)] font-bold text-lg mb-2">High Fidelity</h4>
                         <p className="text-[var(--color-medical-text-dim)] text-sm">State-of-the-art manikins and haptics.</p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ const About = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-medical-primary)] to-transparent opacity-60"></div>
                 <div className="absolute bottom-6 left-6">
-                    <div className="text-[var(--color-medical-text)] font-bold text-xl">Team Dynamics</div>
+                    <div className="text-[var(--color-medical-highlight)] font-bold text-xl">Team Dynamics</div>
                     <div className="text-[var(--color-medical-accent)] text-sm font-semibold">Crisis Resource Management</div>
                 </div>
              </motion.div>

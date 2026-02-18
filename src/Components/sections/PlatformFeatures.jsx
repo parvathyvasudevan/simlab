@@ -62,7 +62,7 @@ const PlatformFeatures = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-medical-accent)]/10 border border-[var(--color-medical-accent)]/20 mb-6 backdrop-blur-md">
                 <span className="text-[var(--color-medical-accent)] font-bold tracking-wider uppercase text-xs">Platform Architecture</span>
             </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-medical-text)] leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-medical-highlight)] leading-tight">
               Powerful Features for <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)] italic">Next-Gen Simulation</span>
             </h2>
@@ -89,7 +89,7 @@ const PlatformFeatures = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-[var(--color-medical-accent)] rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
               </div>
 
-              <h4 className="font-display font-bold text-xl text-[var(--color-medical-text)] mb-4 group-hover:text-[var(--color-medical-accent)] transition-colors">
+              <h4 className="font-display font-bold text-xl text-[var(--color-medical-highlight)] mb-4 group-hover:text-[var(--color-medical-accent)] transition-colors">
                 {feature.title}
               </h4>
               <p className="text-[var(--color-medical-text-dim)] leading-relaxed text-justify text-sm">

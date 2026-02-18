@@ -31,7 +31,7 @@ const ValueProps = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal width="100%">
           <div className="text-center mb-16 relative z-10">
-            <h2 className="font-display text-3xl font-bold text-white">What is SIMLAB?</h2>
+            <h2 className="font-display text-3xl font-bold text-[var(--color-medical-highlight)]">What is SIMLAB?</h2>
             <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto text-justify">
               A next-generation platform delivering real-life simulation experiences for equipment training, clinical decision-making, and upskilling.
             </p>
@@ -51,7 +51,7 @@ const ValueProps = () => {
               <div className={`w-14 h-14 bg-[var(--color-medical-accent)]/10 text-[var(--color-medical-accent)] rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-[var(--color-medical-accent)] group-hover:text-white transition-all duration-300`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-[var(--color-medical-highlight)] mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">{feature.title}</h3>
               <p className="text-slate-400 leading-relaxed text-justify">{feature.description}</p>
             </motion.div>
           ))}

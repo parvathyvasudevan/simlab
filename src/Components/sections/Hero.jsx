@@ -49,7 +49,7 @@ const Hero = () => {
                     <span className="text-[var(--color-medical-accent)] text-sm font-semibold tracking-wide uppercase">Next-Gen Medical Training</span>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl font-display font-bold text-[var(--color-medical-text)] leading-tight mb-8">
+                <h1 className="text-5xl md:text-7xl font-display font-bold text-[var(--color-medical-highlight)] leading-tight mb-8">
                     Master Clinical <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)]">Perfection</span>
                 </h1>
