@@ -58,14 +58,14 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8 ml-auto">
+          <div className="hidden md:flex items-center lg:gap-8 md:gap-4 ml-auto">
             <div className={`flex items-center gap-1 ${isScrolled ? 'bg-white/5' : 'bg-white/10 text-white'} rounded-full px-2 py-1 border border-white/10 backdrop-blur-sm`}>
               {navLinks.map((item) => (
                 <motion.a 
                   key={item.name}
                   href={item.href} 
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className={`relative px-5 py-2 text-sm font-bold ${isScrolled ? 'text-slate-300' : 'text-white/80'} hover:text-[var(--color-neon-purple)] transition-all rounded-full hover:bg-[var(--color-neon-purple)]/5 flex items-center gap-1 group`}
+                  className={`relative lg:px-5 md:px-3 py-2 text-sm font-bold ${isScrolled ? 'text-slate-300' : 'text-white/80'} hover:text-[var(--color-neon-purple)] transition-all rounded-full hover:bg-[var(--color-neon-purple)]/5 flex items-center gap-1 group`}
                 >
                   {item.name}
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
