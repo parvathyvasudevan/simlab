@@ -58,32 +58,7 @@ const Hero = () => {
             />
             
 
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-xl p-5 shadow-lg border border-slate-100">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-xs font-bold text-slate-500 tracking-wider">VITAL SIGNS MONITOR</span>
-                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 border border-green-200">
-                  STABLE
-                </span>
-              </div>
-              <div className="grid grid-cols-4 gap-4 text-center">
-                <div>
-                  <div className="text-xs text-slate-400 mb-1">HR</div>
-                  <div className="text-2xl font-bold text-slate-900">72</div>
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 mb-1">BP</div>
-                  <div className="text-2xl font-bold text-brand-600">120/80</div>
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 mb-1">O2</div>
-                  <div className="text-2xl font-bold text-slate-900">98%</div>
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 mb-1">RESP</div>
-                  <div className="text-2xl font-bold text-slate-900">16</div>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
