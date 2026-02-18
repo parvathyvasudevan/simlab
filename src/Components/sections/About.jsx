@@ -23,7 +23,7 @@ const About = () => {
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)]">Clinical Reality</span>
                 </h2>
                 <p className="text-[var(--color-medical-text-dim)] text-lg leading-relaxed mb-8 text-justify">
-                    We don't just teach modules, we simulate pressure. Our high-fidelity environments replicate the chaos and complexity of real-world medicine, allowing you to master critical decision-making without patient risk.
+                    We don't just teach modules; we simulate pressure. Our high-fidelity environments replicate the chaos and complexity of real-world medicine, allowing you to master critical decision-making without patient risk.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6">
