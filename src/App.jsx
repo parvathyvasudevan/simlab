@@ -1,33 +1,44 @@
 import React from 'react';
-import Navbar from './Components/layout/Navbar';
-import Footer from './Components/layout/Footer';
-import Hero from './Components/sections/Hero';
-import ValueProps from './Components/sections/ValueProps';
-import HowItWorks from './Components/sections/HowItWorks';
-import Difference from './Components/sections/Difference';
-import InstitutionControl from './Components/sections/InstitutionControl';
-import Audience from './Components/sections/Audience';
-import PlatformFeatures from './Components/sections/PlatformFeatures';
-import Partners from './Components/sections/Partners';
-import Pricing from './Components/sections/Pricing';
-import CTA from './Components/sections/CTA';
+import Navbar from './components/layout/Navbar';
+import Hero from './components/sections/Hero';
+import Partners from './components/sections/Partners';
+import About from './components/sections/About';
+import PlatformFeatures from './components/sections/PlatformFeatures';
+import ValueProps from './components/sections/ValueProps';
+import VRLearning from './components/sections/VRLearning';
+import HowItWorks from './components/sections/HowItWorks';
+import Training from './components/sections/Training';
+import Programs from './components/sections/Programs';
+import Audience from './components/sections/Audience';
+import InstitutionControl from './components/sections/InstitutionControl';
+import Difference from './components/sections/Difference';
+
+import Pricing from './components/sections/Pricing';
+import CTA from './components/sections/CTA';
+import Contact from './components/sections/Contact';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <div className="font-sans text-slate-800 antialiased bg-slate-50 selection:bg-brand-500 selection:text-white">
+    <div className="font-sans antialiased text-slate-900 selection:bg-[#00B3B3] selection:text-white bg-slate-50">
       <Navbar />
-      <main>
+      <div className="pt-20"> {/* Add padding top to account for fixed navbar */}
         <Hero />
-        <ValueProps />
-        <HowItWorks />
-        <Difference />
-        <InstitutionControl />
-        <Audience />
+        <About />
         <PlatformFeatures />
+        <ValueProps />
+        <VRLearning />
+        <HowItWorks />
+        <Training />
         <Partners />
+        <Programs />
+        <Audience />
+        <InstitutionControl />
+        <Difference />
         <Pricing />
         <CTA />
-      </main>
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

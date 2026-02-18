@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -15,66 +22,76 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Features', href: '#features' },
-    { name: 'Partners', href: '#partners' }
+    { name: 'Training', href: '#training' },
+    { name: 'VR Learning', href: '#vr-learning' },
+    { name: 'Partners', href: '#partners' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-brand-100 py-2' 
-          : 'bg-transparent py-4'
+          ? 'bg-[var(--color-midnight-purple)]/80 backdrop-blur-xl border-[var(--color-neon-purple)]/20 py-3 shadow-2xl' 
+          : 'bg-transparent border-transparent py-6'
       }`}
     >
+      {/* Scroll Progress Bar */}
+      <motion.div 
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-neon-purple)] to-[var(--color-deep-indigo)] origin-left"
+        style={{ scaleX }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
 
+          {/* Logo */}
           <div 
-            className="flex-shrink-0 flex items-center gap-2 cursor-pointer" 
+            className="flex-shrink-0 flex items-center gap-2 cursor-pointer group" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="font-display font-bold text-2xl tracking-tight text-brand-600">SIMLAB</span>
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-neon-purple)] to-[var(--color-deep-indigo)] flex items-center justify-center text-white shadow-lg group-hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all duration-300">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:text-[var(--color-neon-purple)] transition-all">
+              SIM<span className="text-[var(--color-neon-purple)]">LAB</span>
+            </span>
           </div>
 
-
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8 ml-auto">
-
-            <div className="flex items-center gap-8">
+            <div className={`flex items-center gap-1 ${isScrolled ? 'bg-white/5' : 'bg-white/10 text-white'} rounded-full px-2 py-1 border border-white/10 backdrop-blur-sm`}>
               {navLinks.map((item) => (
-                <a 
+                <motion.a 
                   key={item.name}
                   href={item.href} 
-                  className="group relative text-slate-600 hover:text-brand-600 font-medium transition-colors py-2"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className={`relative px-5 py-2 text-sm font-bold ${isScrolled ? 'text-slate-300' : 'text-white/80'} hover:text-[var(--color-neon-purple)] transition-all rounded-full hover:bg-[var(--color-neon-purple)]/5 flex items-center gap-1 group`}
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <motion.div 
+                     className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[var(--color-neon-purple)]"
+                     whileHover={{ width: '40%' }}
+                  />
+                </motion.a>
               ))}
             </div>
 
-            {/* Separator */}
-           
-
-
-            <div className="flex items-center gap-4">
-              <a href="#contact" className="text-slate-900 font-semibold hover:text-brand-600 transition-colors">
-              
-              </a>
+            <div className="flex items-center gap-4 pl-4">
               <a 
                 href="#demo" 
-                className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-full font-semibold shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-0.5 hover:shadow-brand-500/40"
+                className="px-6 py-2.5 bg-gradient-to-r from-[var(--color-neon-purple)] to-[var(--color-deep-indigo)] text-white rounded-full font-semibold shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all transform hover:-translate-y-0.5 border border-white/10"
               >
-                Request Demo
+                Book Demo
               </a>
             </div>
           </div>
 
-
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center ml-auto">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-slate-900 hover:text-brand-600 focus:outline-none p-2"
+              className="text-white hover:text-[var(--color-neon-purple)] focus:outline-none p-2 bg-white/10 rounded-lg border border-white/10"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -82,25 +99,21 @@ const Navbar = () => {
         </div>
       </div>
 
-
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl py-6 px-4 flex flex-col space-y-4 animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[var(--color-midnight-purple)] border-b border-[var(--color-neon-purple)]/20 shadow-2xl py-6 px-4 flex flex-col space-y-4 animate-fade-in-up">
           {navLinks.map((item) => (
             <a 
               key={item.name}
               href={item.href}
-              className="text-slate-800 hover:text-brand-600 font-medium text-lg block"
+              className="text-slate-300 hover:text-[var(--color-neon-purple)] font-medium text-lg block border-b border-white/5 pb-2 px-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.name}
             </a>
           ))}
-          <hr className="border-slate-100 my-2" />
-          <a href="#contact" className="text-slate-900 font-semibold text-lg block">
-            Log In
-          </a>
-          <a href="#demo" className="bg-brand-600 text-white font-bold py-3 px-4 rounded-xl text-center block shadow-brand-500/30 shadow-lg">
-            Request Demo
+          <a href="#demo" className="bg-gradient-to-r from-[var(--color-neon-purple)] to-[var(--color-deep-indigo)] text-white font-bold py-3 px-4 rounded-xl text-center block shadow-lg mt-4">
+            Book Demo
           </a>
         </div>
       )}

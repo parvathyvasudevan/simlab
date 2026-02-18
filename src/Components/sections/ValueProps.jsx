@@ -25,12 +25,14 @@ const ValueProps = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-[var(--color-medical-primary)] relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-medical-accent)]/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal width="100%">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold text-slate-900">What is SIMLAB?</h2>
-            <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          <div className="text-center mb-16 relative z-10">
+            <h2 className="font-display text-3xl font-bold text-white">What is SIMLAB?</h2>
+            <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto text-justify">
               A next-generation platform delivering real-life simulation experiences for equipment training, clinical decision-making, and upskilling.
             </p>
           </div>
@@ -44,13 +46,13 @@ const ValueProps = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+              className="glass-panel p-8 rounded-3xl hover:border-[var(--color-medical-accent)]/30 transition-all duration-300 group"
             >
-              <div className={`w-14 h-14 bg-${feature.color}-100 text-${feature.color}-600 rounded-xl flex items-center justify-center text-3xl mb-6`}>
+              <div className={`w-14 h-14 bg-[var(--color-medical-accent)]/10 text-[var(--color-medical-accent)] rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-[var(--color-medical-accent)] group-hover:text-white transition-all duration-300`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">{feature.title}</h3>
+              <p className="text-slate-400 leading-relaxed text-justify">{feature.description}</p>
             </motion.div>
           ))}
         </div>

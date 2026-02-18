@@ -27,15 +27,23 @@ const Difference = () => {
   ];
 
   return (
-    <section id="difference" className="py-24 bg-brand-50/30 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="difference" className="py-24 bg-[var(--color-midnight-purple)] overflow-hidden relative">
+        {/* Background Accents (Neon Purple/Blue Immersion) */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-neon-purple)]/20 rounded-full blur-[150px] pointer-events-none animate-pulse-glow"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[var(--color-deep-indigo)]/20 rounded-full blur-[150px] pointer-events-none animate-pulse-glow" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Grid Overlay */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-1/2">
             <ScrollReveal width="100%" direction="left">
-              <h2 className="font-display text-4xl font-bold text-slate-900 mb-6">What Makes SIMLAB Different?</h2>
+               <h2 className="text-[var(--color-neon-purple)] font-bold tracking-widest uppercase text-sm mb-4 drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">The Difference</h2>
+               <h3 className="font-display text-4xl md:text-5xl font-bold mb-6 text-white text-gradient">What Makes SIMLAB Different?</h3>
             </ScrollReveal>
             <ScrollReveal width="100%" delay={0.1} direction="left">
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-lg text-slate-400 mb-10 leading-relaxed text-justify">
                 True-to-life medical simulations that bridge the gap between theory and practice. We focus on the consequences of decisions.
               </p>
             </ScrollReveal>
@@ -48,14 +56,14 @@ const Difference = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                   viewport={{ once: true }}
-                  className="flex items-start p-4 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-slate-100 group"
+                  className="flex items-start p-6 rounded-[1.5rem] transition-all duration-300 bg-white/5 border border-[var(--color-neon-purple)]/20 hover:border-[var(--color-neon-purple)]/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] group backdrop-blur-xl"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-sm border border-slate-100 text-2xl mr-5 group-hover:scale-110 group-hover:border-brand-100 group-hover:text-brand-600 transition-all duration-300">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[var(--color-neon-purple)]/10 flex items-center justify-center border border-[var(--color-neon-purple)]/20 text-2xl mr-6 group-hover:scale-110 group-hover:bg-[var(--color-neon-purple)] group-hover:text-white transition-all duration-300 shadow-lg">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-slate-900 mb-1">{item.title}</h4>
-                    <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                    <h4 className="font-display font-bold text-lg text-white mb-2 group-hover:text-[var(--color-neon-purple)] transition-colors">{item.title}</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed text-justify group-hover:text-slate-200 transition-colors">{item.description}</p>
                   </div>
                 </motion.li>
               ))}
@@ -63,47 +71,16 @@ const Difference = () => {
           </div>
           <div className="md:w-1/2">
             <ScrollReveal width="100%" direction="right" delay={0.2}>
-              <div className="relative aspect-square p-8">
-
-                <div className="absolute inset-0 bg-brand-100/50 rounded-3xl transform rotate-3 scale-95 z-0"></div>
+              <div className="relative aspect-square p-8 group">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-neon-purple)]/40 to-[var(--color-deep-indigo)]/40 rounded-3xl transform rotate-3 scale-95 z-0 blur-2xl group-hover:scale-105 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-[var(--color-midnight-purple)] rounded-3xl transform -rotate-3 z-0 border border-[var(--color-neon-purple)]/20"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                  src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Doctor using tablet" 
-                  className="relative rounded-2xl shadow-xl z-10 border border-slate-100"
+                  className="relative rounded-2xl shadow-2xl z-10 border border-[var(--color-neon-purple)]/20 brightness-90 contrast-110 grayscale-[20%] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 w-full h-full object-cover"
                 />
 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-xl shadow-lg border border-slate-100 max-w-xs"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
-                    <span className="font-bold text-slate-800">Student Progress</span>
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex justify-between text-xs text-slate-500 mb-1.5">
-                        <span className="font-medium">Clinical Reasoning</span>
-                        <span className="font-bold text-slate-900">92%</span>
-                      </div>
-                      <div className="w-full bg-slate-100 rounded-full h-1.5">
-                        <div className="bg-brand-600 h-1.5 rounded-full" style={{ width: '92%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between text-xs text-slate-500 mb-1.5">
-                        <span className="font-medium">Procedure Time</span>
-                        <span className="font-bold text-slate-900">85%</span>
-                      </div>
-                      <div className="w-full bg-slate-100 rounded-full h-1.5">
-                        <div className="bg-brand-400 h-1.5 rounded-full" style={{ width: '85%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+
               </div>
             </ScrollReveal>
           </div>

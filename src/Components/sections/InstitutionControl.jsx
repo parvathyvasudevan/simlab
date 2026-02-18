@@ -23,17 +23,18 @@ const InstitutionControl = () => {
   ];
 
   return (
-    <section className="py-20 bg-slate-50 border-y border-brand-100">
+    <section className="py-20 bg-white border-y border-[var(--color-medical-accent)]/10 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-medical-accent)]/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal width="100%">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h3 className="text-brand-600 font-semibold uppercase tracking-wider text-sm mb-3">
+          <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
+            <h3 className="text-[var(--color-medical-accent)] font-semibold uppercase tracking-wider text-sm mb-3">
               Global Standards
             </h3>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-medical-text)] mb-6">
               Designed for Medical Institutions Worldwide
             </h2>
-            <p className="text-slate-600 text-lg">
+            <p className="text-[var(--color-medical-text-dim)] text-lg text-justify">
               Empower your institution with advanced tools designed for large-scale medical training management.
             </p>
           </div>
@@ -47,18 +48,18 @@ const InstitutionControl = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              className="glass-panel rounded-3xl p-8 bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all duration-300 shadow-sm hover:shadow-lg group"
             >
-              <div className="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <div className="w-14 h-14 bg-[var(--color-medical-accent)]/10 rounded-xl flex items-center justify-center text-[var(--color-medical-accent)] mb-6 group-hover:bg-[var(--color-medical-accent)] group-hover:text-white transition-colors duration-300 shadow-sm">
                 {item.icon}
               </div>
-              <h4 className="font-bold text-xl text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
+              <h4 className="font-bold text-xl text-[var(--color-medical-text)] mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">
                 {item.title}
               </h4>
-              <p className="text-slate-500 text-sm leading-relaxed mb-6">
+              <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed mb-6 text-justify">
                 {item.description}
               </p>
-              <div className="flex items-center text-brand-600 font-semibold text-sm group/link cursor-pointer">
+              <div className="flex items-center text-[var(--color-medical-accent)] font-semibold text-sm group/link cursor-pointer">
                 <span>Learn more</span>
                 <ChevronRight className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform" />
               </div>
@@ -67,12 +68,13 @@ const InstitutionControl = () => {
         </div>
 
         <ScrollReveal width="100%" delay={0.2}>
-          <div className="bg-white rounded-2xl p-8 border border-brand-100 shadow-sm text-center max-w-2xl mx-auto">
-            <p className="text-slate-500 text-sm uppercase tracking-wider font-semibold mb-2">
+          <div className="glass-panel rounded-3xl p-8 bg-white border border-[var(--color-medical-accent)]/10 relative z-10 text-center max-w-2xl mx-auto overflow-hidden shadow-sm">
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-medical-accent)]/5 to-transparent"></div>
+            <p className="text-[var(--color-medical-text-dim)] text-sm uppercase tracking-wider font-semibold mb-2 relative z-10">
               Official Content Partner
             </p>
-            <div className="text-2xl md:text-3xl font-bold text-slate-900">
-              Training content powered by <span className="text-brand-600">Dräger Medical Academy</span>
+            <div className="text-2xl md:text-3xl font-bold text-[var(--color-medical-text)] relative z-10">
+              Training content powered by <span className="text-[var(--color-medical-accent)]">Dräger Medical Academy</span>
             </div>
           </div>
         </ScrollReveal>

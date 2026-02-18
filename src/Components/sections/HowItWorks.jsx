@@ -7,35 +7,40 @@ const HowItWorks = () => {
     {
       id: 1,
       title: "Register",
-      description: "Institution or Individual creates a secure account."
+      description: "Institution or Individual creates a secure account.",
+      icon: "👤"
     },
     {
       id: 2,
-      title: "Access Modules",
-      description: "Browse the extensive simulation-based training library."
+      title: "Select Module",
+      description: "Browse the extensive simulation-based training library.",
+      icon: "📚"
     },
     {
       id: 3,
       title: "Simulate",
-      description: "Perform real-life medical scenarios in the browser."
+      description: "Perform real-life medical scenarios in VR or browser.",
+      icon: "🎮"
     },
     {
       id: 4,
       title: "Certify",
-      description: "Get evaluated, graded & certified automatically."
+      description: "Get evaluated, graded & certified automatically.",
+      icon: "🏆"
     }
   ];
 
   return (
-    <section className="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <section className="py-32 bg-[var(--color-medical-primary)] relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#3b82f6 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
-      
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(var(--color-medical-accent) 1px, transparent 1px)`, backgroundSize: '40px 40px' }}></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--color-medical-highlight)]/10 rounded-full blur-[150px] pointer-events-none"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal width="100%">
-          <div className="text-center mb-16">
-            
-            <h2 className="font-display text-3xl mt-2 font-bold text-white">How SIMLAB Works</h2>
+          <div className="text-center mb-20">
+            <h2 className="text-[var(--color-medical-accent)] font-bold tracking-wide uppercase text-sm mb-3">Process</h2>
+            <h3 className="font-display text-4xl font-bold text-[var(--color-medical-text)]">How SIMLAB Works</h3>
           </div>
         </ScrollReveal>
         
@@ -43,17 +48,25 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <motion.div 
               key={step.id} 
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
               className="relative group"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-600 to-brand-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-              <div className="relative p-6 bg-slate-900/90 backdrop-blur-sm rounded-2xl border border-slate-800 h-full">
-                <div className="text-5xl font-bold text-slate-800 mb-4 group-hover:text-brand-500 transition-colors">{step.id}</div>
-                <h4 className="text-xl font-bold mb-2 text-white">{step.title}</h4>
-                <p className="text-slate-400">{step.description}</p>
+              {/* Connector */}
+              {index !== steps.length - 1 && (
+                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[var(--color-medical-accent)]/10 to-transparent z-0 transform -translate-x-8"></div>
+              )}
+
+              <div className="glass-panel p-8 rounded-3xl h-full relative z-10 border border-[var(--color-medical-accent)]/10 bg-white hover:border-[var(--color-medical-accent)]/30 transition-all duration-500 shadow-sm hover:shadow-lg">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)] flex items-center justify-center text-3xl shadow-lg shadow-[var(--color-medical-accent)]/10 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {step.icon}
+                </div>
+                <div className="text-4xl font-bold text-[var(--color-medical-accent)]/5 absolute top-0 right-4">{step.id}</div>
+                
+                <h4 className="text-xl font-display font-bold mb-3 text-[var(--color-medical-text)] group-hover:text-[var(--color-medical-accent)] transition-colors">{step.title}</h4>
+                <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed text-justify">{step.description}</p>
               </div>
             </motion.div>
           ))}
