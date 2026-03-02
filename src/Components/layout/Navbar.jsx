@@ -46,15 +46,14 @@ const Navbar = () => {
 
           {/* Logo */}
           <div 
-            className="flex-shrink-0 flex items-center gap-2 cursor-pointer group" 
+            className="flex-shrink-0 flex items-center cursor-pointer" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-neon-purple)] to-[var(--color-deep-indigo)] flex items-center justify-center text-white shadow-lg group-hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all duration-300">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-            </div>
-            <span className={`font-display font-bold text-2xl tracking-tight transition-all ${isScrolled ? 'text-white' : 'text-[var(--color-medical-text)]'} group-hover:text-[var(--color-neon-purple)]`}>
-              SIM<span className="text-[var(--color-neon-purple)]">LAB</span>
-            </span>
+            <img 
+              src="/simlab-logo.svg" 
+              alt="Simlab Logo" 
+              className="h-14 w-14 object-contain drop-shadow-[0_0_10px_rgba(27,117,188,0.3)] transition-transform duration-300 hover:scale-105" 
+            />
           </div>
 
           {/* Desktop Nav */}
