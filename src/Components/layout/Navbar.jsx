@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
+import simlabLogo from '../../assets/simlab-logo.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,7 +51,7 @@ const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <img 
-              src="/simlab-logo.svg" 
+              src={simlabLogo} 
               alt="Simlab Logo" 
               className="h-14 w-14 object-contain drop-shadow-[0_0_10px_rgba(27,117,188,0.3)] transition-transform duration-300 hover:scale-105" 
             />
