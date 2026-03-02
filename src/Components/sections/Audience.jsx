@@ -5,25 +5,21 @@ import ScrollReveal from '../ui/ScrollReveal';
 const Audience = () => {
   const audiences = [
     {
-      icon: "🏥",
       color: "brand",
       title: "Medical Colleges",
       description: "Enhance curriculum with virtual labs and standardized patient scenarios to improve student readiness."
     },
     {
-      icon: "🏨",
       color: "indigo",
       title: "Hospitals",
       description: "Continuous professional development and complex equipment training for staff."
     },
     {
-      icon: "👨‍⚕️",
       color: "teal",
       title: "Professionals",
       description: "Upskill and maintain certification with convenient, anytime online simulations."
     },
     {
-      icon: "🎓",
       color: "purple",
       title: "Students",
       description: "Practice clinical skills safely in a risk-free environment before meeting real patients."
@@ -58,7 +54,6 @@ const Audience = () => {
               viewport={{ once: true }}
               className={`glass-panel p-6 rounded-2xl bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all border-t-4 border-t-[var(--color-medical-accent)]/80 hover:shadow-[0_15px_40px_rgba(99,102,241,0.06)] relative z-20 group`}
             >
-              <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
               <h3 className="font-bold text-lg mb-2 text-[var(--color-medical-highlight)] group-hover:text-[var(--color-medical-accent)] transition-colors">{item.title}</h3>
               <p className="text-[var(--color-medical-text-dim)] text-sm text-justify">{item.description}</p>
             </motion.div>

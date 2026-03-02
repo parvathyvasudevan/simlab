@@ -8,49 +8,41 @@ const Programs = () => {
   const programs = [
     { 
         name: "Anaesthesia Workstations", 
-        icon: "💨",
         category: "Critical Care",
         description: "Master the operation of modern anaesthesia delivery systems and gas monitoring with hands-on simulations."
     },
     { 
         name: "Medical Ventilators", 
-        icon: "🫁",
         category: "Respiratory",
         description: "Advanced modes, weaning strategies, and troubleshooting for critical respiratory care scenarios."
     },
     { 
         name: "Neonatal Care", 
-        icon: "👶",
         category: "Pediatrics",
         description: "Specialized thermoregulation and gentle respiratory support protocols for fragile newborns."
     },
     { 
         name: "Patient Monitoring", 
-        icon: "🖥️",
         category: "Diagnostics",
         description: "Real-time interpretation of vital signs, arrhythmia detection, and comprehensive alarm management."
     },
     { 
         name: "High-Frequency Ventilation", 
-        icon: "⚡",
         category: "Advanced Respiratory",
         description: "Expertise in HFOV strategies to protect delicate lungs in critical cases and reduce injury."
     },
     { 
         name: "Lung Protective Strategies", 
-        icon: "🛡️",
         category: "Safety Protocols",
         description: "Evidence-based ventilation protocols designed to prevent Ventilator-Induced Lung Injury (VILI)."
     },
     { 
         name: "Device Application", 
-        icon: "⚙️",
         category: "Technical Skills",
         description: "Hands-on configuration, regular maintenance, and rigorous safety checks for medical devices."
     },
     { 
         name: "Workplace Design", 
-        icon: "🏗️",
         category: "Ergonomics",
         description: "Optimizing clinical workspaces for maximum ergonomics, workflow efficiency, and infection control."
     }
@@ -67,7 +59,7 @@ const Programs = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
-             <div className="text-center max-w-3xl mx-auto mb-20">
+             <div className="text-center max-w-3xl mx-auto mb-16">
                  <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-medical-accent)]/10 border border-[var(--color-medical-accent)]/20 mb-6 backdrop-blur-md">
                     <span className="text-[var(--color-medical-accent)] font-bold tracking-wide uppercase text-xs">Certification & Skills</span>
                  </div>
@@ -92,10 +84,7 @@ const Programs = () => {
                         
                         <div className="p-8 relative z-10 flex flex-col h-full">
                             {/* Header */}
-                            <div className="flex justify-between items-start mb-6">
-                                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-medical-accent)]/10 to-[var(--color-medical-highlight)]/5 border border-[var(--color-medical-accent)]/10 flex items-center justify-center text-3xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-sm">
-                                    {prog.icon}
-                                </div>
+                            <div className="flex justify-end items-start mb-6">
                                 <span className="text-xs font-semibold text-[var(--color-medical-text-dim)] bg-[var(--color-medical-secondary)] px-3 py-1 rounded-full border border-[var(--color-medical-accent)]/10">
                                     {prog.category}
                                 </span>

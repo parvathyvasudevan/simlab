@@ -5,19 +5,16 @@ import ScrollReveal from '../ui/ScrollReveal';
 const ValueProps = () => {
   const features = [
     {
-      icon: "🎮",
       color: "blue",
       title: "Simulation-First",
       description: "Go beyond video lectures with interactive, hands-on scenarios that mimic real-world medical situations."
     },
     {
-      icon: "🌍",
       color: "indigo",
       title: "Real-World Scenarios",
       description: "Train on authentic clinical cases designed by top medical experts and accredited institutions."
     },
     {
-      icon: "📊",
       color: "teal",
       title: "Performance-Based",
       description: "Detailed analytics and feedback to track progress, identify gaps, and ensure clinical competency."
@@ -48,10 +45,7 @@ const ValueProps = () => {
               viewport={{ once: true }}
               className="glass-panel p-8 rounded-3xl hover:border-[var(--color-medical-accent)]/30 transition-all duration-300 group"
             >
-              <div className={`w-14 h-14 bg-[var(--color-medical-accent)]/10 text-[var(--color-medical-accent)] rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-[var(--color-medical-accent)] group-hover:text-white transition-all duration-300`}>
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold text-[var(--color-medical-highlight)] mb-3 group-hover:text-[var(--color-medical-accent)] transition-colors">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-[var(--color-medical-highlight)] mb-3 mt-4 group-hover:text-[var(--color-medical-accent)] transition-colors">{feature.title}</h3>
               <p className="text-slate-400 leading-relaxed text-justify">{feature.description}</p>
             </motion.div>
           ))}

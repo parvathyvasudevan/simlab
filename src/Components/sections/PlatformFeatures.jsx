@@ -1,13 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  LayoutDashboard, 
-  Cpu, 
-  BarChart3, 
-  Users, 
-  Award, 
-  Globe 
-} from 'lucide-react';
+
 import ScrollReveal from '../ui/ScrollReveal';
 
 const PlatformFeatures = () => {
@@ -15,37 +8,31 @@ const PlatformFeatures = () => {
     { 
       title: "Multi-Tenant Management", 
       desc: "Manage multiple departments or campuses from a single, centralized dashboard with hierarchy controls.",
-      icon: <LayoutDashboard className="w-6 h-6" />,
       color: "from-[var(--color-medical-accent)]/20 to-[var(--color-medical-highlight)]/10"
     },
     { 
       title: "Real-Life Modules", 
       desc: "High-fidelity simulations for specialized equipment, respiratory care, and complex clinical procedures.",
-      icon: <Cpu className="w-6 h-6" />,
       color: "from-[var(--color-medical-highlight)]/20 to-[var(--color-medical-accent)]/10"
     },
     { 
       title: "Progress Tracking", 
       desc: "Comprehensive analytics reporting on individual and cohort performance over time with trend analysis.",
-      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-[var(--color-medical-highlight)]/20 to-blue-600/10"
     },
     { 
       title: "Trainer Dashboards", 
       desc: "Real-time monitoring and active assessment tools for instructors to guide students through simulations.",
-      icon: <Users className="w-6 h-6" />,
       color: "from-[var(--color-medical-accent)]/20 to-[var(--color-medical-highlight)]/10"
     },
     { 
       title: "Automated Certification", 
       desc: "Instant grading and secure certificate generation upon successful module completion and validation.",
-      icon: <Award className="w-6 h-6" />,
       color: "from-[var(--color-medical-highlight)]/20 to-teal-500/10"
     },
     { 
       title: "Global Cloud Access", 
       desc: "Secure, low-latency cloud-based platform accessible from anywhere, ensuring seamless training continuity.",
-      icon: <Globe className="w-6 h-6" />,
       color: "from-[var(--color-medical-accent)]/20 to-indigo-500/10"
     }
   ];
@@ -83,12 +70,6 @@ const PlatformFeatures = () => {
               {/* Subtle Top Glow Border */}
               <div className={`absolute top-0 left-0 w-full h-px bg-gradient-to-r ${feature.color} opacity-30 group-hover:opacity-100 transition-opacity duration-500`}></div>
               
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-[var(--color-medical-accent)] mb-8 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(20,184,166,0.2)] transition-all duration-500 relative`}>
-                {feature.icon}
-                {/* Micro-sparkle Effect */}
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-[var(--color-medical-accent)] rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
-              </div>
-
               <h4 className="font-display font-bold text-xl text-[var(--color-medical-highlight)] mb-4 group-hover:text-[var(--color-medical-accent)] transition-colors">
                 {feature.title}
               </h4>

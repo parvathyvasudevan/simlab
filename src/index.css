@@ -8,23 +8,23 @@ html {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Outfit', system-ui, sans-serif;
 
-  /* Clean White & Blue-Purple Mix Palette */
+  /* Clean White & Navy Blue Palette */
   --color-medical-primary: #FAFAFA; /* Pristine White */
-  --color-medical-secondary: #F8FAFF; /* Soft Blue-Gray */
-  --color-medical-accent: #6366F1; /* Vibrant Indigo-Blue */
-  --color-medical-highlight: #8B5CF6; /* Professional Purple */
+  --color-medical-secondary: #F0F4F8; /* Soft Navy-Gray */
+  --color-medical-accent: #1E3A8A; /* Bold Navy Blue */
+  --color-medical-highlight: #2563EB; /* Bright Blue */
   --color-medical-text: #0F172A; /* Slate 900 for Headings/Primary Text */
   --color-medical-text-dim: #334155; /* Slate 700 for secondary text */
   
   /* Glassmorphism Variables (Optimized for Light Theme) */
-  --color-glass-border: rgba(99, 102, 241, 0.1);
+  --color-glass-border: rgba(30, 58, 138, 0.1);
   --color-glass-surface: rgba(255, 255, 255, 0.7);
   --color-glass-highlight: rgba(255, 255, 255, 0.9);
 
-  /* Blackmixpurple Palette */
-  --color-midnight-purple: #0D0B1F;
-  --color-neon-purple: #A855F7;
-  --color-deep-indigo: #4F46E5;
+  /* Deep Navy Palette */
+  --color-midnight-purple: #0A1128; /* Very deep navy/black */
+  --color-neon-purple: #3B82F6; /* Vibrant Blue for original neon usage */
+  --color-deep-indigo: #172554; /* Slate 950 / Deep Navy */
 }
 
 /* Base Styles */

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, ArrowRight } from 'lucide-react';
+import simlabLogo from '../../assets/simlab-logo.svg';
 
 const Footer = () => {
   return (
@@ -13,21 +13,18 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                S
+              <div className="flex-shrink-0 flex items-center">
+                <img 
+                  src={simlabLogo} 
+                  alt="Simlab Logo" 
+                  className="h-12 w-12 object-contain" 
+                />
               </div>
               <span className="font-display font-bold text-2xl text-[var(--color-medical-text)] tracking-tight">SIM<span className="text-[var(--color-medical-accent)]">LAB</span></span>
             </div>
             <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed max-w-xs">
               Empowering healthcare professionals with next-generation simulation training. Master critical skills in a risk-free environment.
             </p>
-            <div className="flex gap-4 pt-2">
-              {[Twitter, Linkedin, Instagram, Facebook].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-[var(--color-medical-accent)]/5 border border-[var(--color-medical-accent)]/10 flex items-center justify-center text-[var(--color-medical-text-dim)] hover:bg-[var(--color-medical-accent)] hover:text-white hover:border-[var(--color-medical-accent)] transition-all duration-300 group">
-                  <Icon size={18} className="transform group-hover:scale-110 transition-transform" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Platform Column */}
@@ -40,7 +37,6 @@ const Footer = () => {
               {['Virtual Simulations', 'Skill Assessment', 'Institutional Dashboard', 'Certified Authors', 'Integration API'].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-sm hover:text-[var(--color-medical-accent)] transition-colors flex items-center gap-2 group">
-                    <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-[var(--color-medical-accent)]" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{item}</span>
                   </a>
                 </li>
@@ -73,7 +69,6 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <div className="relative">
-                  <Mail className="absolute left-4 top-3.5 text-[var(--color-medical-text-dim)]" size={18} />
                   <input 
                     type="email" 
                     placeholder="Enter your email" 

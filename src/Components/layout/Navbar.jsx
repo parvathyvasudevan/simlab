@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import simlabLogo from '../../assets/simlab-logo.svg';
 
@@ -68,7 +68,6 @@ const Navbar = () => {
                   className={`relative lg:px-5 md:px-3 py-2 text-sm font-bold ${isScrolled ? 'text-slate-300' : 'text-[var(--color-medical-text)]'} hover:text-[var(--color-neon-purple)] transition-all rounded-full hover:bg-[var(--color-neon-purple)]/5 flex items-center gap-1 group`}
                 >
                   {item.name}
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <motion.div 
                      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[var(--color-neon-purple)]"
                      whileHover={{ width: '40%' }}

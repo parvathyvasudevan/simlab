@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollReveal from '../ui/ScrollReveal';
+import brandImage from '../../assets/simlab-brand-montage.png';
 
 const Partners = () => {
   return (
@@ -21,9 +22,20 @@ const Partners = () => {
               <div className="text-xs font-bold uppercase tracking-[0.5em] text-[var(--color-neon-purple)] mb-8 opacity-80">Medical Academy</div>
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-[var(--color-neon-purple)] to-transparent mb-8"></div>
               <div className="text-xl text-[var(--color-medical-highlight)] font-display font-bold mb-4 tracking-wide">Advanced Medical Equipment Training</div>
-              <p className="text-slate-400 max-w-xl mx-auto text-base leading-relaxed text-justify group-hover:text-slate-300 transition-colors">
+              <p className="text-slate-400 max-w-xl mx-auto text-base leading-relaxed text-center group-hover:text-slate-300 transition-colors mb-12">
                 SIMLAB licenses and integrates premium simulation content from Dräger Medical Academy under strict platform governance and quality standards.
               </p>
+
+              {/* Native Vector Image Placement */}
+              <div className="w-full max-w-md mx-auto aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(37,99,235,0.15)] border border-[var(--color-medical-accent)]/20 relative group/img bg-white/5 p-3 backdrop-blur-sm">
+                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-medical-primary)] to-transparent opacity-30 group-hover/img:opacity-0 transition-opacity duration-500 pointer-events-none z-10"></div>
+                 <img 
+                    src={brandImage} 
+                    alt="Simlab Platform Aesthetics" 
+                    className="w-full h-full object-cover transform group-hover/img:scale-105 transition-transform duration-700 rounded-2xl filter brightness-110 contrast-125 saturate-150"
+                 />
+              </div>
+
             </div>
           </div>
         </ScrollReveal>

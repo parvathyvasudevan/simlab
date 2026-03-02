@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check, ShieldCheck } from 'lucide-react';
 import ScrollReveal from '../ui/ScrollReveal';
 
 const Pricing = () => {
@@ -22,10 +21,7 @@ const Pricing = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-medical-accent)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative z-10">
-                  <div className="w-14 h-14 bg-[var(--color-medical-accent)]/10 rounded-2xl flex items-center justify-center mb-6 text-[var(--color-medical-accent)] border border-[var(--color-medical-accent)]/10 group-hover:scale-110 transition-transform duration-300">
-                    <ShieldCheck size={28} />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold text-[var(--color-medical-highlight)] mb-2">Institutional Access</h3>
+                  <h3 className="text-2xl font-display font-bold text-[var(--color-medical-highlight)] mb-2 mt-4">Institutional Access</h3>
                   <p className="text-[var(--color-medical-text-dim)] mb-8 text-sm h-10 text-justify">For Hospitals, Universities & Training Centers requiring full administrative control.</p>
                   
                   <div className="space-y-4 mb-10">
@@ -37,9 +33,7 @@ const Pricing = () => {
                       "Priority 24/7 Support"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center text-[var(--color-medical-text-dim)]">
-                        <div className="w-6 h-6 rounded-full bg-[var(--color-medical-accent)]/10 flex items-center justify-center mr-3 flex-shrink-0">
-                            <Check className="w-3.5 h-3.5 text-[var(--color-medical-accent)]" />
-                        </div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-medical-accent)] mr-4 flex-shrink-0"></div>
                         {item}
                       </div>
                     ))}
@@ -78,9 +72,7 @@ const Pricing = () => {
                       "Monthly Skill Assessment"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center text-[var(--color-medical-text)]">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)] flex items-center justify-center mr-3 flex-shrink-0 shadow-sm">
-                            <Check className="w-3.5 h-3.5 text-white" />
-                        </div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-medical-accent)] mr-4 flex-shrink-0 shadow-sm"></div>
                         {item}
                       </div>
                     ))}

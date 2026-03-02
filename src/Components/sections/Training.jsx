@@ -6,7 +6,6 @@ const Training = () => {
         {
             id: 1,
             category: "Online Learning",
-            icon: "🎓",
             description: "Accessible, flexible learning designed for healthcare professionals on the go.",
             features: [
                 "Free introductory courses on ventilator operation",
@@ -21,7 +20,6 @@ const Training = () => {
         {
             id: 2,
             category: "Onsite Workshops",
-            icon: "👩‍🏫",
             description: "Hands-on mastery with real equipment in a supervised clinical setting.",
             features: [
                 "Practical sessions focused on advanced device skills",
@@ -36,7 +34,6 @@ const Training = () => {
         {
             id: 3,
             category: "VR Simulation",
-            icon: "🧠",
             description: "Risk-free training in realistic virtual environments with Dräger Virtuo.",
             features: [
                 "Realistic VR environments simulating ICU & ER",
@@ -51,7 +48,6 @@ const Training = () => {
         {
             id: 4,
             category: "Sim Labs",
-            icon: "🧪",
             description: "High-fidelity team simulations for complex clinical workflows.",
             features: [
                 "Functional stations with high-fidelity manikins",
@@ -99,7 +95,6 @@ const Training = () => {
                                     <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${module.accent} rounded-full blur-[100px] opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500`}></div>
 
                                     <div className="relative z-10">
-                                        <div className="text-5xl mb-6 filter drop-shadow-md">{module.icon}</div>
                                          <h3 className="text-3xl font-display font-bold text-[var(--color-medical-highlight)] mb-4">{module.category}</h3>
                                         <p className="text-lg text-[var(--color-medical-text-dim)] mb-8 leading-relaxed text-justify">
                                             {module.description}

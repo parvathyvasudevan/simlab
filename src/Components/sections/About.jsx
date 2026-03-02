@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../ui/ScrollReveal';
-import { Shield, Activity, Users, Award } from 'lucide-react';
 
 const About = () => {
   return (
@@ -28,13 +27,11 @@ const About = () => {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                     <div className="p-6 rounded-2xl bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all shadow-sm">
-                        <Shield className="w-10 h-10 text-[var(--color-medical-accent)] mb-4" />
-                        <h4 className="text-[var(--color-medical-highlight)] font-bold text-lg mb-2">Zero-Risk Learning</h4>
+                        <h4 className="text-[var(--color-medical-highlight)] font-bold text-lg mb-2 mt-2">Zero-Risk Learning</h4>
                         <p className="text-[var(--color-medical-text-dim)] text-sm">Mistakes here are lessons, not liabilities.</p>
                     </div>
                     <div className="p-6 rounded-2xl bg-white border border-[var(--color-medical-accent)]/10 hover:border-[var(--color-medical-accent)]/30 transition-all shadow-sm">
-                        <Activity className="w-10 h-10 text-[var(--color-medical-highlight)] mb-4" />
-                        <h4 className="text-[var(--color-medical-highlight)] font-bold text-lg mb-2">High Fidelity</h4>
+                        <h4 className="text-[var(--color-medical-highlight)] font-bold text-lg mb-2 mt-2">High Fidelity</h4>
                         <p className="text-[var(--color-medical-text-dim)] text-sm">State-of-the-art manikins and haptics.</p>
                     </div>
                 </div>
@@ -84,7 +81,6 @@ const About = () => {
                 className="h-48 rounded-3xl bg-gradient-to-br from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)] p-6 flex flex-col justify-between text-white relative overflow-hidden group shadow-lg"
              >
                 <div className="absolute -right-6 -top-6 w-24 h-24 bg-white/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
-                <Award className="w-10 h-10" />
                 <div>
                     <div className="font-bold text-3xl">ISO</div>
                     <div className="font-medium opacity-80 text-sm">Certified Center</div>

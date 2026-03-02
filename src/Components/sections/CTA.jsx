@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight } from 'lucide-react';
 import ScrollReveal from '../ui/ScrollReveal';
+import abstractLogo from '../../assets/simlab-blue-abstract.png';
 
 const CTA = () => {
   return (
@@ -25,6 +25,20 @@ const CTA = () => {
         </ScrollReveal>
 
         <div className="border-y border-[var(--color-medical-accent)]/10 py-10 my-10 relative">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-8"
+          >
+            <img 
+              src={abstractLogo} 
+              alt="Simlab Abstract Icon" 
+              className="h-32 object-contain drop-shadow-[0_0_15px_rgba(27,117,188,0.4)] hover:scale-105 transition-transform duration-500"
+            />
+          </motion.div>
+          
           <h3 className="text-2xl font-bold mb-8 font-display text-[var(--color-medical-highlight)]">Why Choose SIMLAB?</h3>
           <div className="grid md:grid-cols-3 gap-y-4 gap-x-8 text-left max-w-4xl mx-auto">
             {[
@@ -42,7 +56,7 @@ const CTA = () => {
                 viewport={{ once: true }}
                 className="flex items-center gap-3"
               >
-                <CheckCircle className="w-5 h-5 text-[var(--color-medical-accent)] flex-shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-[var(--color-medical-accent)] mr-4 flex-shrink-0"></div>
                 <span className="text-[var(--color-medical-text-dim)] font-medium">{item}</span>
               </motion.div>
             ))}
@@ -61,7 +75,6 @@ const CTA = () => {
             className="group px-8 py-4 bg-gradient-to-r from-[var(--color-medical-accent)] to-[var(--color-medical-highlight)] text-white rounded-3xl font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-1"
           >
             Request a Demo
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a 
             href="#contact" 

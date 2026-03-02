@@ -2,14 +2,14 @@
   <defs>
     <style>
       .logo-color {
-        stroke: #1B75BC;
+        stroke: #1E3A8A; /* Navy Blue */
         fill: none;
         stroke-width: 3.5;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
       .logo-fill {
-        fill: #1B75BC;
+        fill: #1E3A8A;
       }
       .logo-bg {
         fill: #ffffff;
@@ -18,7 +18,7 @@
         font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
         font-size: 52px;
         font-weight: 700;
-        fill: #1B75BC;
+        fill: #1E3A8A;
         letter-spacing: 4px;
       }
     </style>

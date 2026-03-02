@@ -7,7 +7,7 @@ const VRLearning = () => {
         {
             title: "3D Anatomy Exploration",
             desc: "Visualize complex anatomical structures in high definition.",
-            img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            videoId: "3d43advxR3k"
         },
         {
             title: "Emergency Scenarios",
@@ -17,7 +17,7 @@ const VRLearning = () => {
         {
             title: "Virtual ICU Training",
             desc: "Master ventilator settings and patient monitoring protocols.",
-            img: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            videoId: "gvlGAdmFaRc"
         }
     ];
 
@@ -53,12 +53,25 @@ const VRLearning = () => {
                     className="group relative rounded-[2rem] overflow-hidden bg-white/5 border border-[var(--color-neon-purple)]/20 backdrop-blur-xl hover:border-[var(--color-neon-purple)]/60 transition-all duration-500 shadow-2xl"
                 >
                     <div className="h-56 overflow-hidden relative">
-                        <img 
-                            src={feature.img} 
-                            alt={feature.title} 
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75 group-hover:brightness-100"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-midnight-purple)] to-transparent opacity-60"></div>
+                        {feature.videoId ? (
+                            <iframe 
+                                className="w-full h-full object-cover"
+                                src={`https://www.youtube.com/embed/${feature.videoId}?start=7&autoplay=1&mute=1&loop=1&playlist=${feature.videoId}`}
+                                title={feature.title}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        ) : (
+                            <>
+                                <img 
+                                    src={feature.img} 
+                                    alt={feature.title} 
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75 group-hover:brightness-100"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-midnight-purple)] to-transparent opacity-60 pointer-events-none"></div>
+                            </>
+                        )}
                     </div>
                     <div className="p-8 relative">
                         <h4 className="font-display font-bold text-2xl mb-3 text-white group-hover:text-[var(--color-neon-purple)] transition-colors duration-300">{feature.title}</h4>

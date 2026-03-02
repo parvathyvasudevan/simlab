@@ -5,22 +5,18 @@ import ScrollReveal from '../ui/ScrollReveal';
 const Difference = () => {
   const differentiators = [
     {
-      icon: "⚖️",
       title: "Decision-Based Scenarios",
       description: "Branching clinical paths where every choice impacts the patient outcome."
     },
     {
-      icon: "🩺",
       title: "Equipment Workflows",
       description: "Replica interfaces of real medical devices for authentic operational training."
     },
     {
-      icon: "📈",
       title: "Outcome-Driven",
       description: "Evaluation based on latest clinical guidelines and patient safety metrics."
     },
     {
-      icon: "🛡️",
       title: "Mistake-Safe",
       description: "Learn from critical errors in a risk-free virtual environment."
     }
@@ -58,10 +54,7 @@ const Difference = () => {
                   viewport={{ once: true }}
                   className="flex items-start p-6 rounded-[1.5rem] transition-all duration-300 bg-white/5 border border-[var(--color-neon-purple)]/20 hover:border-[var(--color-neon-purple)]/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] group backdrop-blur-xl"
                 >
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[var(--color-neon-purple)]/10 flex items-center justify-center border border-[var(--color-neon-purple)]/20 text-2xl mr-6 group-hover:scale-110 group-hover:bg-[var(--color-neon-purple)] group-hover:text-white transition-all duration-300 shadow-lg">
-                    {item.icon}
-                  </div>
-                  <div>
+                  <div className="w-full">
                     <h4 className="font-display font-bold text-lg text-[var(--color-medical-highlight)] mb-2 group-hover:text-[var(--color-neon-purple)] transition-colors">{item.title}</h4>
                     <p className="text-slate-300 text-sm leading-relaxed text-justify group-hover:text-slate-200 transition-colors">{item.description}</p>
                   </div>

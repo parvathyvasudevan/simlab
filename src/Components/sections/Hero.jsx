@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, ArrowRight, Activity, Zap, Shield } from 'lucide-react';
 import { useScroll, useTransform } from 'framer-motion';
 import heroBg from '../../assets/hero_bg.png';
 
@@ -68,7 +67,6 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                         <span className="relative z-10 flex items-center gap-3">
                             Start Training
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </span>
                     </motion.button>
                     
@@ -77,17 +75,11 @@ const Hero = () => {
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-4 bg-[var(--color-medical-secondary)] border border-[var(--color-medical-accent)]/20 text-[var(--color-medical-text)] rounded-full font-bold text-lg transition-all flex items-center justify-center gap-3 shadow-md group"
                     >
-                        <div className="w-8 h-8 rounded-full bg-[var(--color-medical-accent)]/10 flex items-center justify-center group-hover:bg-[var(--color-medical-accent)] group-hover:text-white transition-all duration-300">
-                            <Play className="w-4 h-4 fill-current" />
-                        </div>
                         Partner with Simlab
                     </motion.button>
                 </div>
 
                 {/* Stats */}
-                
-                   
-                  
             </motion.div>
 
             {/* Visuals */}
@@ -98,44 +90,18 @@ const Hero = () => {
                 className="relative hidden lg:block"
             >
                 <div className="relative z-10 animate-float-slow">
-                    <img 
-                        src={heroBg}
-                        alt="Medical VR Simulation" 
-                        className="w-full h-auto rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10"
-                    />
-                    
-                    {/* Floating Cards with Magnetic Shift */}
-                    <motion.div 
-                        animate={{ y: [0, -15, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute -left-12 top-20 p-4 bg-white/90 backdrop-blur-xl border border-[var(--color-medical-accent)]/20 rounded-2xl shadow-2xl z-20"
-                    >
-                        <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
-                                <Activity className="w-6 h-6" />
-                            </div>
-                            <div>
-                                <div className="text-xs text-[var(--color-medical-text-dim)] font-bold">Live Vitals</div>
-                                <div className="text-sm font-bold text-[var(--color-medical-text)]">Patient Stable</div>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div 
-                        animate={{ y: [0, 15, 0] }}
-                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                        className="absolute -right-8 bottom-32 p-4 bg-white/90 backdrop-blur-xl border border-[var(--color-medical-accent)]/20 rounded-2xl shadow-2xl z-20"
-                    >
-                         <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-[var(--color-medical-accent)]/10 flex items-center justify-center text-[var(--color-medical-accent)]">
-                                <Zap className="w-6 h-6" />
-                            </div>
-                            <div>
-                                <div className="text-xs text-[var(--color-medical-text-dim)] font-bold">Accuracy</div>
-                                <div className="text-sm font-bold text-[var(--color-medical-text)]">99.8% Precision</div>
-                            </div>
-                        </div>
-                    </motion.div>
+                    <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 bg-black">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://www.youtube.com/embed/LDQxjY6pZ8k?autoplay=1&mute=1&loop=1&playlist=LDQxjY6pZ8k" 
+                            title="Simlab Medical VR Training" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen
+                            className="absolute top-0 left-0 w-full h-full object-cover"
+                        ></iframe>
+                    </div>
                 </div>
             </motion.div>
         </div>
