@@ -52,14 +52,19 @@ const HowItWorks = () => {
             >
               {/* Connector */}
               {index !== steps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[var(--color-medical-accent)]/10 to-transparent z-0 transform -translate-x-8"></div>
+                  <div className="hidden md:block absolute top-14 left-full w-full h-0.5 bg-gradient-to-r from-[var(--color-medical-accent)]/10 to-transparent z-0 transform -translate-x-8"></div>
               )}
 
-              <div className="glass-panel p-8 rounded-3xl h-full relative z-10 border border-[var(--color-medical-accent)]/10 bg-white hover:border-[var(--color-medical-accent)]/30 transition-all duration-500 shadow-sm hover:shadow-lg">
-                <div className="text-4xl font-bold text-[var(--color-medical-accent)]/10 absolute top-4 left-6">{step.id}</div>
-                
-                <h4 className="text-xl font-display font-bold mb-3 mt-10 text-[var(--color-medical-highlight)] group-hover:text-[var(--color-medical-accent)] transition-colors">{step.title}</h4>
-                <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed text-justify">{step.description}</p>
+              <div className="glass-panel p-8 rounded-3xl h-full relative z-10 border border-[var(--color-medical-accent)]/10 bg-white hover:border-[var(--color-medical-accent)]/30 transition-all duration-500 shadow-sm hover:shadow-lg flex flex-col">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-[#0a2540] text-white font-display font-bold text-lg shadow-[0_4px_15px_rgba(10,37,64,0.3)] border border-[#0a2540]/20 group-hover:bg-[#1a365d] transition-all duration-300">
+                    {step.id}
+                  </div>
+                  <h4 className="text-xl font-display font-bold text-[var(--color-medical-highlight)] group-hover:text-[var(--color-medical-accent)] transition-colors m-0 leading-tight">
+                    {step.title}
+                  </h4>
+                </div>
+                <p className="text-[var(--color-medical-text-dim)] text-sm leading-relaxed text-left">{step.description}</p>
               </div>
             </motion.div>
           ))}

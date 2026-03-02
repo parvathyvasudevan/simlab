@@ -53,9 +53,9 @@ const Navbar = () => {
             <img 
               src={simlabLogo} 
               alt="Simlab Logo" 
-              className="h-14 w-14 object-contain drop-shadow-[0_0_10px_rgba(27,117,188,0.3)] transition-transform duration-300 group-hover:scale-105" 
+              className="h-[60px] w-auto object-contain drop-shadow-[0_0_10px_rgba(27,117,188,0.3)] transition-transform duration-300 group-hover:scale-105" 
             />
-            <span className={`font-display font-black text-2xl tracking-tighter ${isScrolled ? 'text-slate-100' : 'text-[var(--color-medical-text)]'}`}>
+            <span className={`font-display font-black text-4xl tracking-tighter ${isScrolled ? 'text-slate-100' : 'text-[var(--color-medical-text)]'}`}>
               SIM<span className="text-[var(--color-medical-accent)]">LAB</span>
             </span>
           </div>

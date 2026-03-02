@@ -53,10 +53,7 @@ const Pricing = () => {
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-[var(--color-medical-accent)] rounded-full blur-[80px] opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
               
               <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-6">
-                      <div className="w-14 h-14 bg-[var(--color-medical-accent)] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[var(--color-medical-accent)]/30 group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-2xl font-bold">P</span>
-                      </div>
+                  <div className="flex justify-end items-start mb-6">
                       <span className="px-3 py-1 bg-[var(--color-medical-accent)]/20 text-[var(--color-medical-accent)] text-xs font-bold uppercase rounded-full border border-[var(--color-medical-accent)]/30">Most Popular</span>
                   </div>
 
