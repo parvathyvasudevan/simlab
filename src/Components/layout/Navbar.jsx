@@ -47,14 +47,17 @@ const Navbar = () => {
 
           {/* Logo */}
           <div 
-            className="flex-shrink-0 flex items-center cursor-pointer" 
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <img 
               src={simlabLogo} 
               alt="Simlab Logo" 
-              className="h-14 w-14 object-contain drop-shadow-[0_0_10px_rgba(27,117,188,0.3)] transition-transform duration-300 hover:scale-105" 
+              className="h-14 w-14 object-contain drop-shadow-[0_0_10px_rgba(27,117,188,0.3)] transition-transform duration-300 group-hover:scale-105" 
             />
+            <span className={`font-display font-black text-2xl tracking-tighter ${isScrolled ? 'text-slate-100' : 'text-[var(--color-medical-text)]'}`}>
+              SIM<span className="text-[var(--color-medical-accent)]">LAB</span>
+            </span>
           </div>
 
           {/* Desktop Nav */}

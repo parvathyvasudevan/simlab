@@ -70,16 +70,18 @@ const PlatformFeatures = () => {
               {/* Subtle Top Glow Border */}
               <div className={`absolute top-0 left-0 w-full h-px bg-gradient-to-r ${feature.color} opacity-30 group-hover:opacity-100 transition-opacity duration-500`}></div>
               
-              <h4 className="font-display font-bold text-xl text-[var(--color-medical-highlight)] mb-4 group-hover:text-[var(--color-medical-accent)] transition-colors">
-                {feature.title}
-              </h4>
-              <p className="text-[var(--color-medical-text-dim)] leading-relaxed text-justify text-sm">
-                {feature.desc}
-              </p>
-
-              {/* Decorative Index Number */}
-              <div className="absolute -bottom-4 -right-4 text-9xl font-display font-black text-[var(--color-medical-accent)]/5 pointer-events-none group-hover:text-[var(--color-medical-highlight)]/10 transition-colors duration-500">
-                0{index + 1}
+              <div className="flex flex-col h-full z-10 relative">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-[#0a2540] text-white font-display font-bold text-lg shadow-[0_4px_15px_rgba(10,37,64,0.3)] border border-[#0a2540]/20 group-hover:bg-[#1a365d] transition-all duration-300">
+                    0{index + 1}
+                  </div>
+                  <h4 className="font-display font-bold text-xl text-[var(--color-medical-highlight)] group-hover:text-[var(--color-medical-accent)] transition-colors leading-tight">
+                    {feature.title}
+                  </h4>
+                </div>
+                <p className="text-[var(--color-medical-text-dim)] leading-relaxed text-left text-sm">
+                  {feature.desc}
+                </p>
               </div>
             </motion.div>
           ))}
