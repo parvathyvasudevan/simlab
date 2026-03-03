@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollReveal from '../ui/ScrollReveal';
 import brandImage from '../../assets/simlab-brand-montage.png';
+import dragerLogo from '../../assets/Drager_Logo.svg';
 
 const Partners = () => {
   return (
@@ -18,7 +19,7 @@ const Partners = () => {
               "We dictate the technology, they provide the clinical expertise."
             </p>
             <div className="flex flex-col items-center relative z-10">
-              <div className="text-4xl font-display font-bold tracking-[0.4em] text-white mb-3 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">DRÄGER</div>
+              <img src={dragerLogo} alt="Dräger Logo" className="h-12 mb-3" />
               <div className="text-xs font-bold uppercase tracking-[0.5em] text-[var(--color-neon-purple)] mb-8 opacity-80">Medical Academy</div>
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-[var(--color-neon-purple)] to-transparent mb-8"></div>
               <div className="text-xl text-[var(--color-medical-highlight)] font-display font-bold mb-4 tracking-wide">Advanced Medical Equipment Training</div>
